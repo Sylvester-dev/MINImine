@@ -13,3 +13,8 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
+Plan-
+when a player goes to play the game:
+They'll connect their wallet.
+Our game will detect they don't have a character NFT in their wallet.
+We'll let them choose a character and mint their own character NFT to play the game. Each character NFT has its own power.
