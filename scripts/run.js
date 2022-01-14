@@ -12,6 +12,13 @@ async function main() {
   await gameContract.deployed();
 
   console.log("Epic game deployed to:", gameContract.address);
+
+  let txn;
+  txn = await gameContract.mintMonsterNFT(2);
+  await txn.wait();
+//tokenUri is a function on every NFT that returns the actual data attached to the NFT. 
+  let returnedTokenUri = await gameContract.tokenURI(1);
+  console.log("Token URI:", returnedTokenUri);
 }
 
 main()
