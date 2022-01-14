@@ -85,6 +85,35 @@ contract MyEpicGame is ERC721{
       characterEnergy storage player = nftHolderEnergy[nftTokenIdOfPlayer];
       console.log("\nPlayer w/ character %s about to attack. Has %s HP and %s AD", player.name, player.hp, player.attackdmg);
       console.log("Boss %s has %s HP and %s AD", bigBoss.name, bigBoss.hp, bigBoss.attackdmg);
+        // Make sure the player has more than 0 HP.
+        require (
+          player.hp > 0,
+          "Error: character must have HP to attack boss."
+        );
+
+        // Make sure the boss has more than 0 HP.
+        require (
+          bigBoss.hp > 0,
+          "Error: boss already dead."
+        );
+
+          // Allow player to attack boss.
+        if (bigBoss.hp < player.attackdmg) {
+          bigBoss.hp = 0;
+        } else {
+          bigBoss.hp = bigBoss.hp - player.attackdmg;
+        }
+        
+        // Allow boss attacking player.
+        if (player.hp < bigBoss.attackdmg) {
+          player.hp = 0;
+        } else {
+          player.hp = player.hp - bigBoss.attackdmg;
+        }
+        
+        // Console for ease.
+        console.log("Player attacked boss. New boss hp: %s", bigBoss.hp);
+        console.log("Boss attacked player. New player hp: %s\n", player.hp);
   }
   //The tokenURI actually has a specific format! It's actually expecting the NFT data in JSON so we use base64
     function tokenURI(uint256 _tokenId) public view override returns (string memory) {

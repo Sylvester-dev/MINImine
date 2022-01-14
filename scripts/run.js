@@ -24,6 +24,9 @@ async function main() {
   txn = await gameContract.attackBoss();
   await txn.wait();
   
+  txn = await gameContract.attackBoss();
+  await txn.wait();
+
 //tokenUri is a function on every NFT that returns the actual data attached to the NFT. 
   let returnedTokenUri = await gameContract.tokenURI(1);
   console.log("Token URI:", returnedTokenUri);
