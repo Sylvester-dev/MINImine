@@ -20,3 +20,5 @@ Our game will detect they don't have a character NFT in their wallet.
 We'll let them choose a character and mint their own character NFT to play the game. Each character NFT has its own power.
 
 https://testnets.opensea.io/collection/monster-7fa0l1oyvt
+
+//0xB1781327C8b1a74E2588B0218A668B35aDfD0b64

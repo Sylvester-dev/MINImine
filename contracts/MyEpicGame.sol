@@ -35,6 +35,9 @@ contract MyEpicGame is ERC721{
     mapping(uint256 => characterEnergy) nftHolderEnergy;
     mapping(address => uint256) nftHolder;
 
+    event CharacterNFTMinted(address sender, uint256 tokenId, uint256 characterIndex);
+    event AttackComplete(uint newBossHp, uint newPlayerHp);
+
     constructor(string[] memory characterName, string[] memory characterImage, uint[] memory characterHp, uint[] memory characterAttackdmg,
     string memory bossName, string memory bossImage, uint bossHp, uint bossAttackdmg) ERC721("Monster","MONS") {
       
@@ -77,7 +80,8 @@ contract MyEpicGame is ERC721{
      console.log("Minted MONS NFT w/ tokenId %s and characterIndex %s", newItemId, _characterIndex);
      nftHolder[msg.sender]=newItemId;
      _tokenIds.increment();
-        }
+     emit CharacterNFTMinted(msg.sender, newItemId, _characterIndex);
+    }
 
   function attackBoss() public {
   // Get the state of the player's NFT.
@@ -114,7 +118,30 @@ contract MyEpicGame is ERC721{
         // Console for ease.
         console.log("Player attacked boss. New boss hp: %s", bigBoss.hp);
         console.log("Boss attacked player. New player hp: %s\n", player.hp);
+        emit AttackComplete(bigBoss.hp, player.hp);
   }
+
+  function checkIfUserHasNFT() public view returns (characterEnergy memory) {
+  // Get the tokenId of the user's character NFT
+  uint256 userNftTokenId = nftHolder[msg.sender];
+  // If the user has a tokenId in the map, return their character.
+  if (userNftTokenId > 0) {
+    return nftHolderEnergy[userNftTokenId];
+  }
+  // Else, return an empty character.
+  else {
+    characterEnergy memory emptyStruct;
+    return emptyStruct;
+   }
+}
+
+function getAllDefaultCharacters() public view returns (characterEnergy[] memory) {
+  return defaultCharacters;
+}
+
+function getBigBoss() public view returns (boss memory) {
+  return bigBoss;
+}
   //The tokenURI actually has a specific format! It's actually expecting the NFT data in JSON so we use base64
     function tokenURI(uint256 _tokenId) public view override returns (string memory) {
         characterEnergy memory charAttributes = nftHolderEnergy[_tokenId];
