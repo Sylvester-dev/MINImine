@@ -22,3 +22,8 @@ We'll let them choose a character and mint their own character NFT to play the g
 https://testnets.opensea.io/collection/monster-7fa0l1oyvt
 
 //0xB1781327C8b1a74E2588B0218A668B35aDfD0b64
+
+
+App.js - Waiting to see if the user has a minted NFT
+SelectCharacter Component - Waiting for our character NFT to mint
+Arena Component - Waiting for an attack action to finish
