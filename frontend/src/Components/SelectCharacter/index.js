@@ -118,7 +118,7 @@ const mintCharacterNFTAction = (characterId) => async () => {
       <div className="name-container">
         <p>{character.name}</p>
       </div>
-      <img src={character.image} alt={character.name} />
+      <img src={`https://cloudflare-ipfs.com/ipfs/${character.image}`} alt={character.name}/>
       <button
         type="button"
         className="character-mint-button"
@@ -129,7 +129,7 @@ const mintCharacterNFTAction = (characterId) => async () => {
 
 return (
   <div className="select-character-container">
-    <h2>Get your guns Ready and choose your Slug!!</h2>
+    <h2>Getting your Weapon ready!!</h2>
     {!mintingCharacter && characters.length > 0 && (
       <div className="character-grid">{renderCharacters()}</div>
     )}
@@ -141,7 +141,7 @@ return (
           <p>Minting In Progress...</p>
         </div>
         <img
-          src="https://38.media.tumblr.com/053061830c03482dab6c8f81c6d64c56/tumblr_n3lj2yXjs41rqlssyo2_500.gif"
+          src="https://static1.srcdn.com/wordpress/wp-content/uploads/2021/04/Minecraft-End-Dragon-Boss-Fight-Art.jpg"
           alt="Minting loading indicator"
         />
       </div>

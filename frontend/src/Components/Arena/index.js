@@ -114,7 +114,7 @@ const Arena = ({ characterNFT,setCharacterNFT }) => {
       {boss && (
         <div className="boss-container">
           <div className={`boss-content ${attackState}`}>
-            <h2>{boss.name}  👹 </h2>
+            <h2>{boss.name}</h2>
             <div className="image-content">
               <img src={boss.image} alt={`Boss ${boss.name}`} />
               <div className="health-bar">
