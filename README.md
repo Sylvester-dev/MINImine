@@ -1,29 +1,25 @@
-# The Slugterra Land
-Mint your Slug to Fight to protect the people from corrupt slug in this turn-based NFT browser game.
+# The MINImine
+Reunite with your friends and get your weapons ready to fight against an army of zombies and enderDragon to protect your place in this turn-based NFT browser game.
 
-The game is based on a famous television series *Slugterra*. It's made with help of Ethereum smart contracts (a piece of code that lives on the Ethereum blockchain). As its deployed to the blockchain, anyone in the world with a computer or smart phone can access it, run the smart contract, and play the game. The client website allows players to connect their Ethereum wallets and play the game!
+The game is based on a world famous game *Minecraft*. It's made with help of Ethereum smart contracts (a piece of code that lives on the Ethereum blockchain). As its deployed to the blockchain, anyone in the world with a computer or smart phone can access it, run the smart contract, and play the game. The client website allows players to connect their Ethereum wallets and play the game!
 
 The goal of the game is to **Kill. The. Boss**. 🗡 ☠️ 🔪
 
-* Players begin by minting a character NFT. Each minted character has a certain *HP* and *Attack Damage*.
-* Players command their character to attack the Final Boss and inflict damage. Watch out: the Boss fights back!
-* Each character NFT has its attributes (like HP, damage, etc.) stored directly as part of the NFT.
-* An unlimited number of NFTs of each character can be minted
+* Players begin by minting a weapon NFT. Each minted weapon has a certain *HP* and *Attack Damage*.
+* Players use their weapon to attack the Final Boss and inflict damage. Watch out: the Boss fights back!
+* Each weapon NFT has its own attributes (like HP, damage, etc.) stored directly as part of the NFT.
+* Only one weapon per person can be used at a time.
+* Need more power, *Charge* your weapon
+* Feeling lucky, you can get an enchanted power-up attack.
 
 ## How to Play
 1. Go the the [game site](slugterranftgame.3lv.repl.co/)
 2. Connect your metamask wallet with rinkeby network
-3. Choose a character NFT to mint
-4. Work together to fight The Final Boss, *The Goon*   
+3. Choose a weapon NFT to mint
+4. Work together to fight The Final Boss, *The Ender Dragon*   
 
-<!-- ### Choose Your Fighter
-* *MightyChondria* fights for science
-* *IcedCovfefe* represents The Gays™️
-* *TransPride* fights for our right to party
-* *CriticalRaceTheory* fights for liberation
-* *Textbook* fights against revisionist history -->
 
-Each character NFT has the following attributes:
+Each weapon NFT has the following attributes:
 * Image
 * Name
 * HP value
@@ -34,7 +30,7 @@ Players must work together to attack the boss and kill it by draining its HP to 
 
 ## Rules
 * Each player can only have 1 NFT character in their wallet
-* If a character's HP goes below zero, it dies >>> GAME OVER.
+* If a character's weapon HP goes below zero, it dies >>> GAME OVER.
 
 # Development
 ## Dev Tools
@@ -67,7 +63,9 @@ When making changes to immutable smart contracts, you must...
 
 ### Working on features
 * To display a leaderboard
-* Give multiple attack option like power and surprise attack
+* Give multiple attack option like power and booster attack
+* Adding charge particle to enchant and powerup our weapon
+* Making our weapon a real asset
 
 
 
