@@ -1,6 +1,7 @@
 # The MINImine
 
 ![image](https://25.media.tumblr.com/tumblr_m650t57q0q1rpm29co1_500.gif)
+<br/>
 Reunite with your friends and get your weapons ready to fight against an army of zombies and enderDragon to protect your place in this turn-based NFT browser game.
 
 The game is based on a world famous game *Minecraft*. It's made with help of Ethereum smart contracts (a piece of code that lives on the Ethereum blockchain). As its deployed to the blockchain, anyone in the world with a computer or smart phone can access it, run the smart contract, and play the game. The client website allows players to connect their Ethereum wallets and play the game!
